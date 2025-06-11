@@ -52,16 +52,24 @@ a {
 }
 
 .main-title,
+.reviewer-title,
+.pricing-title,
 .contact-title {
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid #dee7ec;
+    text-align: left;
+}
+
+.gallery-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between; 
 }
 
 .content {
-    height: 400px;
-    width: 400px;
-    float: left;
+    flex: 1 1 calc(20%); 
     margin-left: 10px;
 }
 
@@ -91,8 +99,257 @@ a {
 
 .content .content-sub p{
     font-size: 12px;
-    font-family:Zen Kurenaido;
+    font-family: Zen Kurenaido;
     letter-spacing: 1px;
+}
+
+.reviewer{
+    margin-top: 32px;
+}
+
+.review-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.review {
+    flex: 2;
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.review-photo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-name {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.review-date {
+    display: block;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.review-message {
+    font-size: 16px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.featured-review {
+    flex: 1;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+}
+
+.featured-review h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.celebrity {
+    display: flex;
+    align-items: flex-start;
+}
+
+.celebrity-photo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #fff;
+}
+
+.celebrity-content p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.pricing-section {
+  margin: 32px auto 0;
+  text-align: center;
+}
+
+.subtext {
+     font-size: 14px;
+color: #555;
+  text-align: left;
+    margin-bottom: 40px;
+}
+
+.pricing-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.pricing-controls p {
+    font-size: 14px;
+    color: #333;
+}
+
+.selectors {
+    display: flex;
+    gap: 20px;
+}
+
+.selectors label {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.selectors select {
+    margin-left: 10px;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-family: Montserrat;
+    border: 1px solid #ccc;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+     justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #dee7ec;
+    width: 300px;
+    padding: 30px 20px;
+    text-align: left;
+    float: left;
+}
+
+.featured {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, #a05b2a33, transparent 70%);
+    z-index: -1;
+}
+
+.featured h2,
+.featured .price,
+.featured ul li {
+    color: #fff;
+}
+
+.featured .btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.featured .btn:hover {
+    background-color: #f0f0f0;
+}
+
+.card h2 {
+    font-family: Josefin Sans;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+.card .price span {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.card ul {
+    margin-bottom: 20px;
+    padding-left: 18px;
+}
+
+.card ul li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: inherit;
+}
+
+.btn-outline,
+.btn-filled {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Montserrat;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline {
+    border: 2px solid #000;
+    background: transparent;
+    color: #000;
+}
+
+.btn-outline:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-filled {
+    background-color: #fff;
+    color: #5a2e0d;
+    border: none;
+}
+
+.btn-filled:hover {
+background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #fff;
+}
+
+.contact-us{
+    margin-top: 32px;
 }
 
 .contact {
